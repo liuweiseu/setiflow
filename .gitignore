@@ -1,0 +1,20 @@
+# macOS
+.DS_Store
+
+# Nextflow runtime / cache / logs
+.nextflow/
+.nextflow.log*
+work/
+
+# Generated results (reproducible from the pipeline)
+results/
+
+# Data (large / local, not tracked)
+data
+HIP63121_data/
+*.spike
+*.pulse
+*.autocorr
+*.triplet
+*.hdf5
+*.tar.gz
