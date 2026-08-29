@@ -1,5 +1,7 @@
 // Merge data
 process mergeData {
+    label 'data_processing' // cpus set in nextflow.config
+
     input:
     val readySignal         // wait for the tool install signal
     path off_spike          // HIP63121_OFF.spike
@@ -17,6 +19,7 @@ process mergeData {
 
 // Process data and generate plots
 process plotData {
+    label 'data_processing' // cpus set in nextflow.config
     publishDir 'results', mode: 'copy' // copy the generated plots into the results folder
 
     input:
